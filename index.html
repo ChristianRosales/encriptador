@@ -4,38 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">    
-    <title>EncMachine</title>
+    <link rel="icon" href="/assets/img/logo-white.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/bases.css">
+    <link rel="stylesheet" href="/assets/css/styles.css"> 
+    <link rel="stylesheet" href="/assets/css/responsivo.css">    
+    <title>Encriptador</title>
 </head>
 <body>
-    <header>
-        <a href="https://github.com/ChristianRosales" class="logo">
-            <img src="cross_logo.png" alt="" >
+    <header class="encabezado container">
+        <a href="https://github.com/ChristianRosales" class="encabezado__logo">
+            <img src="/assets/img/logo-cros.svg" alt="Logo cross" class="logo">
         </a>
-        <h1>Encryption Machine</h1>
+        <h1 class="encabezado__titulo-principal">Encriptador de mensajes</h1>
     </header>
-<main>
-<article class="container_left">
-    <div class="text_frame">
-        <input type="text" id="in_sentence" value="Ingrese texto aquí">
-    </div>
-    <div class="btn_container">
-        <button type="button" id="encrip_btn" class="btn_enc">Encriptar</button>
-        <button type="button" id="desencrip_btn" class="btn_denc">Desncriptar</button>
-    </div>    
-</article>
-<article class="container_right">
-    <div class="text_encript">
-        <input type="text" id="texto_navi">
-       <div class="container_copy">
-            <button type="button" id="copy_btn">Copiar</button>
-        </div>
-    </div>
-</article>
-</main>
-<footer>
-    <a href="https://github.com/ChristianRosales" class="copyrigth">&#169 2022 por Christian Rosales</a>
-</footer>
+    <main class="principal contenedor">
+        <section id="contenedor__entrada">
+            <article class="tarjetas">
+                <input type="text" id="in_sentence" value="Ingrese texto aquí" class="cuadro-texto">
+                <a id="encrip_btn" class="boton btn_enc" href="#contenedor__salida">Encriptar</a>
+                <a type="button" id="desencrip_btn" class="boton btn_denc" href="#contenedor__salida">Desncriptar</a>
+            </article>
+        </section>
+        <section id="contenedor__salida">
+            <article class="tarjetas">
+                    <input type="text" id="texto_navi" class="cuadro-texto">
+                    <a type="button" id="copy_btn" class="boton btn_copiar" href="#">Copiar</a>
+            </article>
+        </section>
+    </main>
+    <footer class="pie-pagina" id="pie">
+        <a href="https://github.com/ChristianRosales" class="pie-pagina__copyrigth">&#169 2022 por Christian Rosales</a>
+    </footer>
 </body>
 
 <script>
